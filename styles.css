@@ -15,30 +15,17 @@ body {
   gap: 20px;
 }
 
-.cell {
-  padding: 20px;
-  background-color: #007bff;
-  color: white;
+.cell select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
   cursor: pointer;
-  border-radius: 8px;
-  text-align: center;
-  width: 100px;
-}
-
-.cell:hover {
-  background-color: #0056b3;
-}
-
-.selections {
-  margin-top: 20px;
-  display: none;
-}
-
-#selection-list {
-  margin-bottom: 10px;
 }
 
 #enter-button {
+  margin-top: 20px;
   padding: 10px 20px;
   background-color: #28a745;
   color: white;
