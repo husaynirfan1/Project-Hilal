@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selection Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="cell" id="cell1" onclick="showSelections('cell1')">Click Me 1</div>
+    <div class="cell" id="cell2" onclick="showSelections('cell2')">Click Me 2</div>
+    <div class="cell" id="cell3" onclick="showSelections('cell3')">Click Me 3</div>
+  </div>
+
+  <div id="selections" class="selections">
+    <div id="selection-list"></div>
+    <button id="enter-button" onclick="showResult()">Enter</button>
+  </div>
+
+  <div id="result" class="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
