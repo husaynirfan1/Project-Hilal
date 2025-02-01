@@ -1,0 +1,35 @@
+{
+  "location": {
+    "terengganu": [
+      {
+        "month": "syawal",
+        "hijri": "1446",
+        "sunsetTime": "19:20:38",
+        "date": "28-2-2025",
+        "atm_temp": "10",
+        "atm_mb": "1030",
+        "location": "Malaysia, Kuala Terengganu, Terengganu",
+        "longitude": "103°08′26.9″",
+        "latitude": "5°49′48.7″",
+        "elevation": "15.00",
+        "timezone": "Asia/Kuala_Lumpur",
+        "conjuction_time": "28-2-2025 08:44:49 LT or 28-2-2025 00:44:49 UTC",
+        "sunset": "19:20:38",
+        "Sun_altitude": "-0°18′58.3″",
+        "Sun_azimuth": "262°17′03.3″",
+        "Crescent_width": "0°00′03.9″",
+        "Moon_illumination": "0.20 %",
+        "Moon_distance": "363044.06",
+        "Moon_semi-diameter": "0°16′23.0″",
+        "Moon_horizontal_parallax": "1°00′06.6″",
+        "Moonset": "19:41:53",
+        "Moon_age": "10:35:48",
+        "Moon_lag time": "00:21:15",
+        "Moon_altitude": "4°17′17.0″",
+        "Moon_azimuth": "263°00′04.4″",
+        "Moon_elongation_topocentric": "5°07′31.9″",
+        "Moon_elongation_geocentric": "6°07′02.4″"
+      }
+    ]
+  }
+}
