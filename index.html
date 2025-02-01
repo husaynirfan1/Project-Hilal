@@ -828,27 +828,35 @@ function selectValue(type, value, element) {
  
 }
   function startExecution() {
-            // Hide the button and show the progress
-            document.getElementById("executeButton").style.display = "none";
-            document.getElementById("progress").style.display = "block";
-              // Fetch the JSON file from GitHub repository
-  if (filePath) {
-    fetch(filePath)
-      .then(response => response.json())
-      .then(data => {
-        console.log('Fetched Data:', data); // Process your fetched data here
-        alert(`Data fetched for ${value}: ${JSON.stringify(data)}`);
-        
-      })
-      .catch(error => {
-        console.error('Error Code: ', error);
-        alert('Files is not there yet.');
-      });
-  }
+    // Hide the button and show the progress
+    document.getElementById("executeButton").style.display = "none";
+    document.getElementById("progress").style.display = "block";
 
-        document.getElementById("progress").style.display = "none";
-         document.getElementById("executeButton").style.display = "inline-block";
-        }
+    // Fetch the JSON file from GitHub repository
+    if (filePath) {
+        fetch(filePath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Fetched Data:', data); // Process your fetched data here
+                alert(`Data fetched for ${value}: ${JSON.stringify(data)}`);
+            })
+            .catch(error => {
+                console.error('Error Code: ', error);
+                alert('File is not there yet.');
+            })
+            .finally(() => {
+                // Hide the progress and show the button again
+                document.getElementById("progress").style.display = "none";
+                document.getElementById("executeButton").style.display = "inline-block";
+            });
+    }
+}
+
  function getLocation() {
       // Check if the browser supports geolocation
       if (navigator.geolocation) {
