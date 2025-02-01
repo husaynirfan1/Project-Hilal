@@ -1,0 +1,14 @@
+from ahc.hilal import hilal
+
+hijri_year = 1446
+hijri_month = 9       # syawal is 10th month in Hijri calendar
+calculate_maps = True 
+plus_1day = True
+hl = hilal(hijri_year=hijri_year, hijri_month=hijri_month, calculate_maps=calculate_maps, plus_1day=plus_1day)
+latitude = 2.194418
+longitude = 102.249063
+elevation = 12.833
+time_zone_str = 'Asia/Kuala_Lumpur'
+loc_name = 'Malaysia Melaka Tengah, Melaka'
+hl.calculate_hilal_data(latitude, longitude, elevation, time_zone_str, loc_name=loc_name, delta_day=0)
+hl.map_hilal_visibility('Odeh')
