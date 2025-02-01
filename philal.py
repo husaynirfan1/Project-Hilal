@@ -1,7 +1,7 @@
 from ahc.hilal import hilal
 
 hijri_year = 1446
-hijri_month = 9       # syawal is 10th month in Hijri calendar
+hijri_month = 10       # syawal is 10th month in Hijri calendar
 calculate_maps = True 
 plus_1day = True
 hl = hilal(hijri_year=hijri_year, hijri_month=hijri_month, calculate_maps=calculate_maps, plus_1day=plus_1day)
