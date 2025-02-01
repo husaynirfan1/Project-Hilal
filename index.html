@@ -813,8 +813,6 @@ function selectValue(type, value, element) {
     //document.getElementById('selected-timezone').innerText = value;
     document.querySelector('.dropdown .dropbtn').innerText = 'Timezone: ' + value;
     filePath = `https://raw.githubusercontent.com/husaynirfan1/Project-Hilal/main/assets/data/${value.trim()}/${loc_name}.json`;
-
-
   } else if (type === 'Hijri Year') {
     //document.getElementById('selected-hijri-year').innerText = value;
     document.querySelectorAll('.dropdown')[1].querySelector('.dropbtn').innerText = 'Hijri Year: ' + value;
@@ -847,7 +845,7 @@ function selectValue(type, value, element) {
                 alert(`Data fetched for ${value}: ${JSON.stringify(data)}`);
             })
             .catch(error => {
-                console.error('Error Code: ', error);
+                //console.error('Error Code: ', error);
                 alert('File is not there yet.');
             })
             .finally(() => {
