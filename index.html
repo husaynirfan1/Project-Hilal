@@ -838,6 +838,7 @@ function selectValue(type, value, element) {
       .then(data => {
         console.log('Fetched Data:', data); // Process your fetched data here
         alert(`Data fetched for ${value}: ${JSON.stringify(data)}`);
+        
       })
       .catch(error => {
         console.error('Error Code: ', error);
@@ -845,13 +846,8 @@ function selectValue(type, value, element) {
       });
   }
 
-            // Simulate a long-running task (e.g., 5 seconds)
-            setTimeout(function() {
-                // Once the task is complete, hide the progress and show the button again
-                document.getElementById("progress").style.display = "none";
-                document.getElementById("executeButton").style.display = "inline-block";
-                alert("Execution completed!");
-            }, 5000); // 5 seconds delay for demo
+        document.getElementById("progress").style.display = "none";
+         document.getElementById("executeButton").style.display = "inline-block";
         }
  function getLocation() {
       // Check if the browser supports geolocation
