@@ -3,20 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Selection Website</title>
+  <title>Dropdown Selection Website</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <div class="cell" id="cell1" onclick="showSelections('cell1')">Click Me 1</div>
-    <div class="cell" id="cell2" onclick="showSelections('cell2')">Click Me 2</div>
-    <div class="cell" id="cell3" onclick="showSelections('cell3')">Click Me 3</div>
+    <div class="cell">
+      <select id="cell1" onchange="updateSelection('cell1')">
+        <option value="">Select Option 1</option>
+        <option value="Option A">Option A</option>
+        <option value="Option B">Option B</option>
+        <option value="Option C">Option C</option>
+      </select>
+    </div>
+    <div class="cell">
+      <select id="cell2" onchange="updateSelection('cell2')">
+        <option value="">Select Option 2</option>
+        <option value="Option X">Option X</option>
+        <option value="Option Y">Option Y</option>
+        <option value="Option Z">Option Z</option>
+      </select>
+    </div>
+    <div class="cell">
+      <select id="cell3" onchange="updateSelection('cell3')">
+        <option value="">Select Option 3</option>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+      </select>
+    </div>
   </div>
 
-  <div id="selections" class="selections">
-    <div id="selection-list"></div>
-    <button id="enter-button" onclick="showResult()">Enter</button>
-  </div>
+  <button id="enter-button" onclick="showResult()">Enter</button>
 
   <div id="result" class="result"></div>
 
