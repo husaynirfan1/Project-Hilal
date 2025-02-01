@@ -1,0 +1,20 @@
+                 Accurate Hijri Calculator (AHC)
+                  Crescent data for Syawal 1446
+
+
+- Calculations are done for sunset time at 19:17:29 on 29-3-2025
+- All data are in local observer time
+- Atmosphere refraction: Temperature: 10 °C  Pressure: 1030 mb
+- Location: Malaysia Kuala Terengganu, Terengganu
+   - Long: 103°08′26.9″  Lat: 5°49′48.7″  Elev: 15.00 m
+   - Time zone: Asia/Kuala_Lumpur +08:00
+=====================================================================================
+
+- Conjuction time: 29-3-2025 18:57:49 LT or 29-3-2025 10:57:49 UTC
+- Sunset: 19:17:29                       - Moonset: 19:12:37
+- Sun altitude: -0°18′58.3″              - Moon age: 00:19:39
+- Sun azimuth: 273°41′31.9″              - Moon lag time: -1:55:07
+- Crescent width: 0°00′00.4″             - Moon altitude: -2°07′45.3″
+- Moon illumination: 0.02 %              - Moon azimuth: 274°46′57.5″
+- Moon distance: 358851.72 km            - Moon elongation (topocentric): 1°35′11.8″
+- Moon semi-diameter: 0°16′37.3″         - Moon elongation (geocentric): 1°05′53.5″
