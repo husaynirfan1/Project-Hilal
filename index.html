@@ -18,7 +18,24 @@
 		background-position: 0% 50%;
 	}
 }
+        .container {
+            text-align: center;
+        }
 
+        .button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #0c6b37;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ffd700 ;
+        }
 body {
 background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
@@ -32,6 +49,27 @@ background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   margin: 0; /* Remove default margin */
   font-family: Arial, sans-serif;
 }
+        .progress-container {
+            display: none;
+            margin-top: 20px;
+            position: relative;
+            width: 50px;
+            height: 50px;
+        }
+
+        .indeterminate {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #ffd700 ;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 p {text-align: center;}
 .dropbtn {
   background-color: #0c6b37;
@@ -753,33 +791,47 @@ h2 {
 </div>
 
 <div class="selected-value">
-  <p>Selected Timezone: <span id="selected-timezone">None</span></p>
-  <p>Selected Hijri Year: <span id="selected-hijri-year">None</span></p>
-  <p>Selected Hijri Month: <span id="selected-hijri-month">None</span></p>
+  <p><span id="selected-timezone"></span></p>
+  <p><span id="selected-hijri-year"></span></p>
+  <p><span id="selected-hijri-month"></span></p>
 </div>
+
+ <div class="container">
+        <button id="executeButton" class="button" onclick="startExecution()">Calculate</button>
+        <div id="progress" class="progress-container">
+            <div class="indeterminate"></div>
+        </div>
+    </div>
 
 <script>
 var loc_name = '';
+let filePath = '';
 
 function selectValue(type, value, element) {
-let filePath = '';
+
   if (type === 'Timezone') {
-    document.getElementById('selected-timezone').innerText = value;
+    //document.getElementById('selected-timezone').innerText = value;
     document.querySelector('.dropdown .dropbtn').innerText = 'Timezone: ' + value;
-    filePath = `https://raw.githubusercontent.com/husaynirfan1/Project-Hilal/main/assets/data/${value.trim()}/${loc_name}.json`;
+    filePath = `https://raw.githubusercontent.com/husaynirfan1/ProjectHilal/main/assets/data/${value.trim()}/${loc_name}.json`;
 
 
   } else if (type === 'Hijri Year') {
-    document.getElementById('selected-hijri-year').innerText = value;
+    //document.getElementById('selected-hijri-year').innerText = value;
     document.querySelectorAll('.dropdown')[1].querySelector('.dropbtn').innerText = 'Hijri Year: ' + value;
   } else if (type === 'Hijri Month') {
-    document.getElementById('selected-hijri-month').innerText = value;
+    //document.getElementById('selected-hijri-month').innerText = value;
     document.querySelectorAll('.dropdown')[2].querySelector('.dropbtn').innerText = 'Hijri Month: ' + value;
   }
 
   // You can now use these values for calculations or other logic
   console.log(`Selected ${type}: ${value}`);
-   // Fetch the JSON file from GitHub repository
+ 
+}
+  function startExecution() {
+            // Hide the button and show the progress
+            document.getElementById("executeButton").style.display = "none";
+            document.getElementById("progress").style.display = "block";
+              // Fetch the JSON file from GitHub repository
   if (filePath) {
     fetch(filePath)
       .then(response => response.json())
@@ -788,11 +840,19 @@ let filePath = '';
         alert(`Data fetched for ${value}: ${JSON.stringify(data)}`);
       })
       .catch(error => {
-        console.error('Error fetching the file:', error);
-        alert('Error fetching the file.');
+        console.error('Error Code: ', error);
+        alert('Files is not there yet.');
       });
   }
-}
+
+            // Simulate a long-running task (e.g., 5 seconds)
+            setTimeout(function() {
+                // Once the task is complete, hide the progress and show the button again
+                document.getElementById("progress").style.display = "none";
+                document.getElementById("executeButton").style.display = "inline-block";
+                alert("Execution completed!");
+            }, 5000); // 5 seconds delay for demo
+        }
  function getLocation() {
       // Check if the browser supports geolocation
       if (navigator.geolocation) {
@@ -839,6 +899,7 @@ function reverseGeocode(lat, lon) {
         const state = data.results[0].components.state || 'County not available';
         document.getElementById("location").innerHTML = `You're located at ${state}, is it right?`;
         loc_name = state;
+	      console.log(loc_name);
       } else {
         document.getElementById("location").innerHTML = `State not found`;
       }
