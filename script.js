@@ -63,7 +63,7 @@ function selectValue(type, value, element) {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
       //to be fix to support many
-      reverseGeocode(5.3302, 103.1408);
+      reverseGeocode(latitude, longitude);
       
       //document.getElementById("location").innerHTML = `Latitude: ${latitude} <br> Longitude: ${longitude}`;
     }
