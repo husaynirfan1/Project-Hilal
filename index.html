@@ -123,16 +123,6 @@ h2 {
 <div class="dropdown-container">
 
   <div class="dropdown">
-    <button class="dropbtn">Choose Hijri Year</button>
-    <div class="dropdown-content">
-      <div onclick="selectValue('Hijri Year', '1444', this)">1444</div>
-      <div onclick="selectValue('Hijri Year', '1445', this)">1445</div>
-      <div onclick="selectValue('Hijri Year', '1446', this)">1446</div>
-    </div>
-  </div>
-
-
-  <div class="dropdown">
     <button class="dropbtn">Choose Timezone</button>
     <div class="dropdown-content">
 <div onclick="selectValue('Timezone', ' Africa/Abidjan', this)">Africa/Abidjan</div>
@@ -814,6 +804,7 @@ let filePath = '';
     function showPosition(position) {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
+      //to be fix to support many
       reverseGeocode(5.3302, 103.1408);
       
       //document.getElementById("location").innerHTML = `Latitude: ${latitude} <br> Longitude: ${longitude}`;
