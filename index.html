@@ -805,7 +805,7 @@ h2 {
 
 <script>
 var loc_name = '';
-filePath = '';
+var filePath = '';
 
 function selectValue(type, value, element) {
 
@@ -829,6 +829,7 @@ function selectValue(type, value, element) {
 }
   function startExecution() {
     // Hide the button and show the progress
+	  console.log(filePath);
     document.getElementById("executeButton").style.display = "none";
     document.getElementById("progress").style.display = "block";
 
