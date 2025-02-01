@@ -842,12 +842,12 @@ function selectValue(type, value, element) {
             })
             .then(data => {
                 console.log('Fetched Data:', data); // Process your fetched data here
-                alert(`Data fetched for ${value}: ${JSON.stringify(data)}`);
+                alert(`Data fetched : ${JSON.stringify(data)}`);
             })
-            // .catch(error => {
-            //     //console.error('Error Code: ', error);
-            //     alert('File is not there yet.');
-            // })
+            .catch(error => {
+                console.error('Error Code: ', error);
+                alert('File is not there yet.');
+            })
             .finally(() => {
                 // Hide the progress and show the button again
                 document.getElementById("progress").style.display = "none";
