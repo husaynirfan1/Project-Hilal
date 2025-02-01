@@ -1,0 +1,21 @@
+		  Accurate Hijri Calculator (AHC)
+                  Crescent data for Ramadhan 1446
+
+
+- Calculations are done for sunset time at 19:25:04 on 28-2-2025
+- All data are in local observer time
+- Atmosphere refraction: Temperature: 10 °C  Pressure: 1030 mb
+- Location: Malaysia Muar,Johor
+   - Long: 102°33′30.3″  Lat: 2°03′27.9″  Elev: 19.00 m
+   - Time zone: Asia/Kuala_Lumpur +08:00
+=====================================================================================
+
+- Conjuction time: 28-2-2025 08:44:49 LT or 28-2-2025 00:44:49 UTC
+- Sunset: 19:25:04                       - Moonset: 19:46:06
+- Sun altitude: -0°19′43.1″              - Moon age: 10:40:15
+- Sun azimuth: 262°15′23.5″              - Moon lag time: 00:21:01
+- Crescent width: 0°00′04.0″             - Moon altitude: 4°15′02.9″
+- Moon illumination: 0.20 %              - Moon azimuth: 263°23′40.1″
+- Moon distance: 363041.78 km            - Moon elongation (topocentric): 5°10′43.3″
+- Moon semi-diameter: 0°16′23.0″         - Moon elongation (geocentric): 6°09′30.0″
+- Moon horizontal parallax: 1°00′06.6″
