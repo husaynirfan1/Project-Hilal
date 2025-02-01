@@ -766,7 +766,8 @@ let filePath = '';
   if (type === 'Timezone') {
     document.getElementById('selected-timezone').innerText = value;
     document.querySelector('.dropdown .dropbtn').innerText = 'Timezone: ' + value;
-        filePath = `https://raw.githubusercontent.com/husaynirfan1/Project-Hilal/blob/main/assets/data/${value.replace(/\//g, '_')}/`+loc_name+`.json`;
+    filePath = `https://raw.githubusercontent.com/husaynirfan1/Project-Hilal/main/assets/data/${value}/${loc_name}.json`;
+
 
   } else if (type === 'Hijri Year') {
     document.getElementById('selected-hijri-year').innerText = value;
