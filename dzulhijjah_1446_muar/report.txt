@@ -1,0 +1,21 @@
+                Accurate Hijri Calculator (AHC)
+                  Crescent data for Dzulhijjah 1446
+
+
+- Calculations are done for sunset time at 19:14:25 on 27-5-2025
+- All data are in local observer time
+- Atmosphere refraction: Temperature: 10 °C  Pressure: 1030 mb
+- Location: Malaysia Muar,Johor
+   - Long: 102°33′30.3″  Lat: 2°03′27.9″  Elev: 19.00 m
+   - Time zone: Asia/Kuala_Lumpur +08:00
+=====================================================================================
+
+- Conjuction time: 27-5-2025 11:02:21 LT or 27-5-2025 03:02:21 UTC
+- Sunset: 19:14:25                       - Moonset: 19:29:06
+- Sun altitude: -0°19′43.1″              - Moon age: 08:12:04
+- Sun azimuth: 291°26′11.1″              - Moon lag time: 00:14:40
+- Crescent width: 0°00′06.0″             - Moon altitude: 2°25′23.8″
+- Moon illumination: 0.30 %              - Moon azimuth: 296°54′31.7″
+- Moon distance: 360506.41 km            - Moon elongation (topocentric): 6°18′25.1″
+- Moon semi-diameter: 0°16′36.5″         - Moon elongation (geocentric): 6°51′51.2″
+- Moon horizontal parallax: 1°00′56.5″
