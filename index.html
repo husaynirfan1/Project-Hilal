@@ -1,665 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project Hilal 1.0🌙</title>
-<link rel="stylesheet" href="styles.css">
-<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon Visibility Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/framer-motion@7.6.16/dist/framer-motion.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-<h1 style="font-family: 'Open Sans', sans-serif;">Project Hilal 1.0 🌙</h1>
-<h2 id="location" style="font-family: 'Open Sans', sans-serif; font-size:20px;"></h2>
-
-<p  style="font-family: 'Open Sans', sans-serif;">Select all your details below. Hover on each box to select your criteria.</p>
-
-<div class="dropdown-container">
-
-  <div class="dropdown">
-    <button class="dropbtn">Choose Timezone</button>
-    <div class="dropdown-content">
-<div onclick="selectValue('Timezone', ' Africa/Abidjan', this)">Africa/Abidjan</div>
-<div onclick="selectValue('Timezone', ' Africa/Accra', this)">Africa/Accra</div>
-<div onclick="selectValue('Timezone', ' Africa/Addis_Ababa', this)">Africa/Addis_Ababa</div>
-<div onclick="selectValue('Timezone', ' Africa/Algiers', this)">Africa/Algiers</div>
-<div onclick="selectValue('Timezone', ' Africa/Asmara', this)">Africa/Asmara</div>
-<div onclick="selectValue('Timezone', ' Africa/Asmera', this)">Africa/Asmera</div>
-<div onclick="selectValue('Timezone', ' Africa/Bamako', this)">Africa/Bamako</div>
-<div onclick="selectValue('Timezone', ' Africa/Bangui', this)">Africa/Bangui</div>
-<div onclick="selectValue('Timezone', ' Africa/Banjul', this)">Africa/Banjul</div>
-<div onclick="selectValue('Timezone', ' Africa/Bissau', this)">Africa/Bissau</div>
-<div onclick="selectValue('Timezone', ' Africa/Blantyre', this)">Africa/Blantyre</div>
-<div onclick="selectValue('Timezone', ' Africa/Brazzaville', this)">Africa/Brazzaville</div>
-<div onclick="selectValue('Timezone', ' Africa/Bujumbura', this)">Africa/Bujumbura</div>
-<div onclick="selectValue('Timezone', ' Africa/Cairo', this)">Africa/Cairo</div>
-<div onclick="selectValue('Timezone', ' Africa/Casablanca', this)">Africa/Casablanca</div>
-<div onclick="selectValue('Timezone', ' Africa/Ceuta', this)">Africa/Ceuta</div>
-<div onclick="selectValue('Timezone', ' Africa/Conakry', this)">Africa/Conakry</div>
-<div onclick="selectValue('Timezone', ' Africa/Dakar', this)">Africa/Dakar</div>
-<div onclick="selectValue('Timezone', ' Africa/Dar_es_Salaam', this)">Africa/Dar_es_Salaam</div>
-<div onclick="selectValue('Timezone', ' Africa/Djibouti', this)">Africa/Djibouti</div>
-<div onclick="selectValue('Timezone', ' Africa/Douala', this)">Africa/Douala</div>
-<div onclick="selectValue('Timezone', ' Africa/El_Aaiun', this)">Africa/El_Aaiun</div>
-<div onclick="selectValue('Timezone', ' Africa/Freetown', this)">Africa/Freetown</div>
-<div onclick="selectValue('Timezone', ' Africa/Gaborone', this)">Africa/Gaborone</div>
-<div onclick="selectValue('Timezone', ' Africa/Harare', this)">Africa/Harare</div>
-<div onclick="selectValue('Timezone', ' Africa/Johannesburg', this)">Africa/Johannesburg</div>
-<div onclick="selectValue('Timezone', ' Africa/Juba', this)">Africa/Juba</div>
-<div onclick="selectValue('Timezone', ' Africa/Kampala', this)">Africa/Kampala</div>
-<div onclick="selectValue('Timezone', ' Africa/Khartoum', this)">Africa/Khartoum</div>
-<div onclick="selectValue('Timezone', ' Africa/Kigali', this)">Africa/Kigali</div>
-<div onclick="selectValue('Timezone', ' Africa/Kinshasa', this)">Africa/Kinshasa</div>
-<div onclick="selectValue('Timezone', ' Africa/Lagos', this)">Africa/Lagos</div>
-<div onclick="selectValue('Timezone', ' Africa/Libreville', this)">Africa/Libreville</div>
-<div onclick="selectValue('Timezone', ' Africa/Lome', this)">Africa/Lome</div>
-<div onclick="selectValue('Timezone', ' Africa/Luanda', this)">Africa/Luanda</div>
-<div onclick="selectValue('Timezone', ' Africa/Lubumbashi', this)">Africa/Lubumbashi</div>
-<div onclick="selectValue('Timezone', ' Africa/Lusaka', this)">Africa/Lusaka</div>
-<div onclick="selectValue('Timezone', ' Africa/Malabo', this)">Africa/Malabo</div>
-<div onclick="selectValue('Timezone', ' Africa/Maputo', this)">Africa/Maputo</div>
-<div onclick="selectValue('Timezone', ' Africa/Maseru', this)">Africa/Maseru</div>
-<div onclick="selectValue('Timezone', ' Africa/Mbabane', this)">Africa/Mbabane</div>
-<div onclick="selectValue('Timezone', ' Africa/Mogadishu', this)">Africa/Mogadishu</div>
-<div onclick="selectValue('Timezone', ' Africa/Monrovia', this)">Africa/Monrovia</div>
-<div onclick="selectValue('Timezone', ' Africa/Nairobi', this)">Africa/Nairobi</div>
-<div onclick="selectValue('Timezone', ' Africa/Ndjamena', this)">Africa/Ndjamena</div>
-<div onclick="selectValue('Timezone', ' Africa/Niamey', this)">Africa/Niamey</div>
-<div onclick="selectValue('Timezone', ' Africa/Nouakchott', this)">Africa/Nouakchott</div>
-<div onclick="selectValue('Timezone', ' Africa/Ouagadougou', this)">Africa/Ouagadougou</div>
-<div onclick="selectValue('Timezone', ' Africa/Porto-Novo', this)">Africa/Porto-Novo</div>
-<div onclick="selectValue('Timezone', ' Africa/Sao_Tome', this)">Africa/Sao_Tome</div>
-<div onclick="selectValue('Timezone', ' Africa/Timbuktu', this)">Africa/Timbuktu</div>
-<div onclick="selectValue('Timezone', ' Africa/Tripoli', this)">Africa/Tripoli</div>
-<div onclick="selectValue('Timezone', ' Africa/Tunis', this)">Africa/Tunis</div>
-<div onclick="selectValue('Timezone', ' Africa/Windhoek', this)">Africa/Windhoek</div>
-<div onclick="selectValue('Timezone', ' America/Adak', this)">America/Adak</div>
-<div onclick="selectValue('Timezone', ' America/Anchorage', this)">America/Anchorage</div>
-<div onclick="selectValue('Timezone', ' America/Anguilla', this)">America/Anguilla</div>
-<div onclick="selectValue('Timezone', ' America/Antigua', this)">America/Antigua</div>
-<div onclick="selectValue('Timezone', ' America/Araguaina', this)">America/Araguaina</div>
-<div onclick="selectValue('Timezone', ' America/Argentina/Buenos_Aires', this)">America/Argentina/Buenos_Aires</div>
-<div onclick="selectValue('Timezone', ' America/Argentina/Catamarca', this)">America/Argentina/Catamarca</div>
-<div onclick="selectValue('Timezone', ' America/Argentina/ComodRivadavia', this)">America/Argentina/ComodRivadavia</div>
-<div onclick="selectValue('Timezone', ' America/Argentina/Cordoba', this)">America/Argentina/Cordoba</div>
-<div onclick="selectValue('Timezone', ' America/Argentina/Jujuy', this)">America/Argentina/Jujuy</div>
-<div onclick="selectValue('Timezone', ' America/Argentina/La_Rioja', this)">America/Argentina/La_Rioja</div>
-<div onclick="selectValue('Timezone', ' America/Argentina/Mendoza', this)">America/Argentina/Mendoza</div>
-<div onclick="selectValue('Timezone', ' America/Argentina/Rio_Gallegos', this)">America/Argentina/Rio_Gallegos</div>
-<div onclick="selectValue('Timezone', ' America/Argentina/Salta', this)">America/Argentina/Salta</div>
-<div onclick="selectValue('Timezone', ' America/Argentina/San_Juan', this)">America/Argentina/San_Juan</div>
-<div onclick="selectValue('Timezone', ' America/Argentina/San_Luis', this)">America/Argentina/San_Luis</div>
-<div onclick="selectValue('Timezone', ' America/Argentina/Tucuman', this)">America/Argentina/Tucuman</div>
-<div onclick="selectValue('Timezone', ' America/Argentina/Ushuaia', this)">America/Argentina/Ushuaia</div>
-<div onclick="selectValue('Timezone', ' America/Aruba', this)">America/Aruba</div>
-<div onclick="selectValue('Timezone', ' America/Asuncion', this)">America/Asuncion</div>
-<div onclick="selectValue('Timezone', ' America/Atikokan', this)">America/Atikokan</div>
-<div onclick="selectValue('Timezone', ' America/Atka', this)">America/Atka</div>
-<div onclick="selectValue('Timezone', ' America/Bahia', this)">America/Bahia</div>
-<div onclick="selectValue('Timezone', ' America/Bahia_Banderas', this)">America/Bahia_Banderas</div>
-<div onclick="selectValue('Timezone', ' America/Barbados', this)">America/Barbados</div>
-<div onclick="selectValue('Timezone', ' America/Belem', this)">America/Belem</div>
-<div onclick="selectValue('Timezone', ' America/Belize', this)">America/Belize</div>
-<div onclick="selectValue('Timezone', ' America/Blanc-Sablon', this)">America/Blanc-Sablon</div>
-<div onclick="selectValue('Timezone', ' America/Boa_Vista', this)">America/Boa_Vista</div>
-<div onclick="selectValue('Timezone', ' America/Bogota', this)">America/Bogota</div>
-<div onclick="selectValue('Timezone', ' America/Boise', this)">America/Boise</div>
-<div onclick="selectValue('Timezone', ' America/Buenos_Aires', this)">America/Buenos_Aires</div>
-<div onclick="selectValue('Timezone', ' America/Cambridge_Bay', this)">America/Cambridge_Bay</div>
-<div onclick="selectValue('Timezone', ' America/Campo_Grande', this)">America/Campo_Grande</div>
-<div onclick="selectValue('Timezone', ' America/Cancun', this)">America/Cancun</div>
-<div onclick="selectValue('Timezone', ' America/Caracas', this)">America/Caracas</div>
-<div onclick="selectValue('Timezone', ' America/Catamarca', this)">America/Catamarca</div>
-<div onclick="selectValue('Timezone', ' America/Cayenne', this)">America/Cayenne</div>
-<div onclick="selectValue('Timezone', ' America/Cayman', this)">America/Cayman</div>
-<div onclick="selectValue('Timezone', ' America/Chicago', this)">America/Chicago</div>
-<div onclick="selectValue('Timezone', ' America/Chihuahua', this)">America/Chihuahua</div>
-<div onclick="selectValue('Timezone', ' America/Ciudad_Juarez', this)">America/Ciudad_Juarez</div>
-<div onclick="selectValue('Timezone', ' America/Coral_Harbour', this)">America/Coral_Harbour</div>
-<div onclick="selectValue('Timezone', ' America/Cordoba', this)">America/Cordoba</div>
-<div onclick="selectValue('Timezone', ' America/Costa_Rica', this)">America/Costa_Rica</div>
-<div onclick="selectValue('Timezone', ' America/Creston', this)">America/Creston</div>
-<div onclick="selectValue('Timezone', ' America/Cuiaba', this)">America/Cuiaba</div>
-<div onclick="selectValue('Timezone', ' America/Curacao', this)">America/Curacao</div>
-<div onclick="selectValue('Timezone', ' America/Danmarkshavn', this)">America/Danmarkshavn</div>
-<div onclick="selectValue('Timezone', ' America/Dawson', this)">America/Dawson</div>
-<div onclick="selectValue('Timezone', ' America/Dawson_Creek', this)">America/Dawson_Creek</div>
-<div onclick="selectValue('Timezone', ' America/Denver', this)">America/Denver</div>
-<div onclick="selectValue('Timezone', ' America/Detroit', this)">America/Detroit</div>
-<div onclick="selectValue('Timezone', ' America/Dominica', this)">America/Dominica</div>
-<div onclick="selectValue('Timezone', ' America/Edmonton', this)">America/Edmonton</div>
-<div onclick="selectValue('Timezone', ' America/Eirunepe', this)">America/Eirunepe</div>
-<div onclick="selectValue('Timezone', ' America/El_Salvador', this)">America/El_Salvador</div>
-<div onclick="selectValue('Timezone', ' America/Ensenada', this)">America/Ensenada</div>
-<div onclick="selectValue('Timezone', ' America/Fort_Nelson', this)">America/Fort_Nelson</div>
-<div onclick="selectValue('Timezone', ' America/Fort_Wayne', this)">America/Fort_Wayne</div>
-<div onclick="selectValue('Timezone', ' America/Fortaleza', this)">America/Fortaleza</div>
-<div onclick="selectValue('Timezone', ' America/Glace_Bay', this)">America/Glace_Bay</div>
-<div onclick="selectValue('Timezone', ' America/Godthab', this)">America/Godthab</div>
-<div onclick="selectValue('Timezone', ' America/Goose_Bay', this)">America/Goose_Bay</div>
-<div onclick="selectValue('Timezone', ' America/Grand_Turk', this)">America/Grand_Turk</div>
-<div onclick="selectValue('Timezone', ' America/Grenada', this)">America/Grenada</div>
-<div onclick="selectValue('Timezone', ' America/Guadeloupe', this)">America/Guadeloupe</div>
-<div onclick="selectValue('Timezone', ' America/Guatemala', this)">America/Guatemala</div>
-<div onclick="selectValue('Timezone', ' America/Guayaquil', this)">America/Guayaquil</div>
-<div onclick="selectValue('Timezone', ' America/Guyana', this)">America/Guyana</div>
-<div onclick="selectValue('Timezone', ' America/Halifax', this)">America/Halifax</div>
-<div onclick="selectValue('Timezone', ' America/Havana', this)">America/Havana</div>
-<div onclick="selectValue('Timezone', ' America/Hermosillo', this)">America/Hermosillo</div>
-<div onclick="selectValue('Timezone', ' America/Indiana/Indianapolis', this)">America/Indiana/Indianapolis</div>
-<div onclick="selectValue('Timezone', ' America/Indiana/Knox', this)">America/Indiana/Knox</div>
-<div onclick="selectValue('Timezone', ' America/Indiana/Marengo', this)">America/Indiana/Marengo</div>
-<div onclick="selectValue('Timezone', ' America/Indiana/Petersburg', this)">America/Indiana/Petersburg</div>
-<div onclick="selectValue('Timezone', ' America/Indiana/Tell_City', this)">America/Indiana/Tell_City</div>
-<div onclick="selectValue('Timezone', ' America/Indiana/Vevay', this)">America/Indiana/Vevay</div>
-<div onclick="selectValue('Timezone', ' America/Indiana/Vincennes', this)">America/Indiana/Vincennes</div>
-<div onclick="selectValue('Timezone', ' America/Indiana/Winamac', this)">America/Indiana/Winamac</div>
-<div onclick="selectValue('Timezone', ' America/Indianapolis', this)">America/Indianapolis</div>
-<div onclick="selectValue('Timezone', ' America/Inuvik', this)">America/Inuvik</div>
-<div onclick="selectValue('Timezone', ' America/Iqaluit', this)">America/Iqaluit</div>
-<div onclick="selectValue('Timezone', ' America/Jamaica', this)">America/Jamaica</div>
-<div onclick="selectValue('Timezone', ' America/Jujuy', this)">America/Jujuy</div>
-<div onclick="selectValue('Timezone', ' America/Juneau', this)">America/Juneau</div>
-<div onclick="selectValue('Timezone', ' America/Kentucky/Louisville', this)">America/Kentucky/Louisville</div>
-<div onclick="selectValue('Timezone', ' America/Kentucky/Monticello', this)">America/Kentucky/Monticello</div>
-<div onclick="selectValue('Timezone', ' America/Knox_IN', this)">America/Knox_IN</div>
-<div onclick="selectValue('Timezone', ' America/Kralendijk', this)">America/Kralendijk</div>
-<div onclick="selectValue('Timezone', ' America/La_Paz', this)">America/La_Paz</div>
-<div onclick="selectValue('Timezone', ' America/Lima', this)">America/Lima</div>
-<div onclick="selectValue('Timezone', ' America/Los_Angeles', this)">America/Los_Angeles</div>
-<div onclick="selectValue('Timezone', ' America/Louisville', this)">America/Louisville</div>
-<div onclick="selectValue('Timezone', ' America/Lower_Princes', this)">America/Lower_Princes</div>
-<div onclick="selectValue('Timezone', ' America/Maceio', this)">America/Maceio</div>
-<div onclick="selectValue('Timezone', ' America/Managua', this)">America/Managua</div>
-<div onclick="selectValue('Timezone', ' America/Manaus', this)">America/Manaus</div>
-<div onclick="selectValue('Timezone', ' America/Marigot', this)">America/Marigot</div>
-<div onclick="selectValue('Timezone', ' America/Martinique', this)">America/Martinique</div>
-<div onclick="selectValue('Timezone', ' America/Matamoros', this)">America/Matamoros</div>
-<div onclick="selectValue('Timezone', ' America/Mazatlan', this)">America/Mazatlan</div>
-<div onclick="selectValue('Timezone', ' America/Mendoza', this)">America/Mendoza</div>
-<div onclick="selectValue('Timezone', ' America/Menominee', this)">America/Menominee</div>
-<div onclick="selectValue('Timezone', ' America/Merida', this)">America/Merida</div>
-<div onclick="selectValue('Timezone', ' America/Metlakatla', this)">America/Metlakatla</div>
-<div onclick="selectValue('Timezone', ' America/Mexico_City', this)">America/Mexico_City</div>
-<div onclick="selectValue('Timezone', ' America/Miquelon', this)">America/Miquelon</div>
-<div onclick="selectValue('Timezone', ' America/Moncton', this)">America/Moncton</div>
-<div onclick="selectValue('Timezone', ' America/Monterrey', this)">America/Monterrey</div>
-<div onclick="selectValue('Timezone', ' America/Montevideo', this)">America/Montevideo</div>
-<div onclick="selectValue('Timezone', ' America/Montreal', this)">America/Montreal</div>
-<div onclick="selectValue('Timezone', ' America/Montserrat', this)">America/Montserrat</div>
-<div onclick="selectValue('Timezone', ' America/Nassau', this)">America/Nassau</div>
-<div onclick="selectValue('Timezone', ' America/New_York', this)">America/New_York</div>
-<div onclick="selectValue('Timezone', ' America/Nipigon', this)">America/Nipigon</div>
-<div onclick="selectValue('Timezone', ' America/Nome', this)">America/Nome</div>
-<div onclick="selectValue('Timezone', ' America/Noronha', this)">America/Noronha</div>
-<div onclick="selectValue('Timezone', ' America/North_Dakota/Beulah', this)">America/North_Dakota/Beulah</div>
-<div onclick="selectValue('Timezone', ' America/North_Dakota/Center', this)">America/North_Dakota/Center</div>
-<div onclick="selectValue('Timezone', ' America/North_Dakota/New_Salem', this)">America/North_Dakota/New_Salem</div>
-<div onclick="selectValue('Timezone', ' America/Nuuk', this)">America/Nuuk</div>
-<div onclick="selectValue('Timezone', ' America/Ojinaga', this)">America/Ojinaga</div>
-<div onclick="selectValue('Timezone', ' America/Panama', this)">America/Panama</div>
-<div onclick="selectValue('Timezone', ' America/Pangnirtung', this)">America/Pangnirtung</div>
-<div onclick="selectValue('Timezone', ' America/Paramaribo', this)">America/Paramaribo</div>
-<div onclick="selectValue('Timezone', ' America/Phoenix', this)">America/Phoenix</div>
-<div onclick="selectValue('Timezone', ' America/Port-au-Prince', this)">America/Port-au-Prince</div>
-<div onclick="selectValue('Timezone', ' America/Port_of_Spain', this)">America/Port_of_Spain</div>
-<div onclick="selectValue('Timezone', ' America/Porto_Acre', this)">America/Porto_Acre</div>
-<div onclick="selectValue('Timezone', ' America/Porto_Velho', this)">America/Porto_Velho</div>
-<div onclick="selectValue('Timezone', ' America/Puerto_Rico', this)">America/Puerto_Rico</div>
-<div onclick="selectValue('Timezone', ' America/Punta_Arenas', this)">America/Punta_Arenas</div>
-<div onclick="selectValue('Timezone', ' America/Rainy_River', this)">America/Rainy_River</div>
-<div onclick="selectValue('Timezone', ' America/Rankin_Inlet', this)">America/Rankin_Inlet</div>
-<div onclick="selectValue('Timezone', ' America/Recife', this)">America/Recife</div>
-<div onclick="selectValue('Timezone', ' America/Regina', this)">America/Regina</div>
-<div onclick="selectValue('Timezone', ' America/Resolute', this)">America/Resolute</div>
-<div onclick="selectValue('Timezone', ' America/Rio_Branco', this)">America/Rio_Branco</div>
-<div onclick="selectValue('Timezone', ' America/Rosario', this)">America/Rosario</div>
-<div onclick="selectValue('Timezone', ' America/Santa_Isabel', this)">America/Santa_Isabel</div>
-<div onclick="selectValue('Timezone', ' America/Santarem', this)">America/Santarem</div>
-<div onclick="selectValue('Timezone', ' America/Santiago', this)">America/Santiago</div>
-<div onclick="selectValue('Timezone', ' America/Santo_Domingo', this)">America/Santo_Domingo</div>
-<div onclick="selectValue('Timezone', ' America/Sao_Paulo', this)">America/Sao_Paulo</div>
-<div onclick="selectValue('Timezone', ' America/Scoresbysund', this)">America/Scoresbysund</div>
-<div onclick="selectValue('Timezone', ' America/Shiprock', this)">America/Shiprock</div>
-<div onclick="selectValue('Timezone', ' America/Sitka', this)">America/Sitka</div>
-<div onclick="selectValue('Timezone', ' America/St_Barthelemy', this)">America/St_Barthelemy</div>
-<div onclick="selectValue('Timezone', ' America/St_Johns', this)">America/St_Johns</div>
-<div onclick="selectValue('Timezone', ' America/St_Kitts', this)">America/St_Kitts</div>
-<div onclick="selectValue('Timezone', ' America/St_Lucia', this)">America/St_Lucia</div>
-<div onclick="selectValue('Timezone', ' America/St_Thomas', this)">America/St_Thomas</div>
-<div onclick="selectValue('Timezone', ' America/St_Vincent', this)">America/St_Vincent</div>
-<div onclick="selectValue('Timezone', ' America/Swift_Current', this)">America/Swift_Current</div>
-<div onclick="selectValue('Timezone', ' America/Tegucigalpa', this)">America/Tegucigalpa</div>
-<div onclick="selectValue('Timezone', ' America/Thule', this)">America/Thule</div>
-<div onclick="selectValue('Timezone', ' America/Thunder_Bay', this)">America/Thunder_Bay</div>
-<div onclick="selectValue('Timezone', ' America/Tijuana', this)">America/Tijuana</div>
-<div onclick="selectValue('Timezone', ' America/Toronto', this)">America/Toronto</div>
-<div onclick="selectValue('Timezone', ' America/Tortola', this)">America/Tortola</div>
-<div onclick="selectValue('Timezone', ' America/Vancouver', this)">America/Vancouver</div>
-<div onclick="selectValue('Timezone', ' America/Virgin', this)">America/Virgin</div>
-<div onclick="selectValue('Timezone', ' America/Whitehorse', this)">America/Whitehorse</div>
-<div onclick="selectValue('Timezone', ' America/Winnipeg', this)">America/Winnipeg</div>
-<div onclick="selectValue('Timezone', ' America/Yakutat', this)">America/Yakutat</div>
-<div onclick="selectValue('Timezone', ' America/Yellowknife', this)">America/Yellowknife</div>
-<div onclick="selectValue('Timezone', ' Antarctica/Casey', this)">Antarctica/Casey</div>
-<div onclick="selectValue('Timezone', ' Antarctica/Davis', this)">Antarctica/Davis</div>
-<div onclick="selectValue('Timezone', ' Antarctica/DumontDUrville', this)">Antarctica/DumontDUrville</div>
-<div onclick="selectValue('Timezone', ' Antarctica/Macquarie', this)">Antarctica/Macquarie</div>
-<div onclick="selectValue('Timezone', ' Antarctica/Mawson', this)">Antarctica/Mawson</div>
-<div onclick="selectValue('Timezone', ' Antarctica/McMurdo', this)">Antarctica/McMurdo</div>
-<div onclick="selectValue('Timezone', ' Antarctica/Palmer', this)">Antarctica/Palmer</div>
-<div onclick="selectValue('Timezone', ' Antarctica/Rothera', this)">Antarctica/Rothera</div>
-<div onclick="selectValue('Timezone', ' Antarctica/South_Pole', this)">Antarctica/South_Pole</div>
-<div onclick="selectValue('Timezone', ' Antarctica/Syowa', this)">Antarctica/Syowa</div>
-<div onclick="selectValue('Timezone', ' Antarctica/Troll', this)">Antarctica/Troll</div>
-<div onclick="selectValue('Timezone', ' Antarctica/Vostok', this)">Antarctica/Vostok</div>
-<div onclick="selectValue('Timezone', ' Arctic/Longyearbyen', this)">Arctic/Longyearbyen</div>
-<div onclick="selectValue('Timezone', ' Asia/Aden', this)">Asia/Aden</div>
-<div onclick="selectValue('Timezone', ' Asia/Almaty', this)">Asia/Almaty</div>
-<div onclick="selectValue('Timezone', ' Asia/Amman', this)">Asia/Amman</div>
-<div onclick="selectValue('Timezone', ' Asia/Anadyr', this)">Asia/Anadyr</div>
-<div onclick="selectValue('Timezone', ' Asia/Aqtau', this)">Asia/Aqtau</div>
-<div onclick="selectValue('Timezone', ' Asia/Aqtobe', this)">Asia/Aqtobe</div>
-<div onclick="selectValue('Timezone', ' Asia/Ashgabat', this)">Asia/Ashgabat</div>
-<div onclick="selectValue('Timezone', ' Asia/Ashkhabad', this)">Asia/Ashkhabad</div>
-<div onclick="selectValue('Timezone', ' Asia/Atyrau', this)">Asia/Atyrau</div>
-<div onclick="selectValue('Timezone', ' Asia/Baghdad', this)">Asia/Baghdad</div>
-<div onclick="selectValue('Timezone', ' Asia/Bahrain', this)">Asia/Bahrain</div>
-<div onclick="selectValue('Timezone', ' Asia/Baku', this)">Asia/Baku</div>
-<div onclick="selectValue('Timezone', ' Asia/Bangkok', this)">Asia/Bangkok</div>
-<div onclick="selectValue('Timezone', ' Asia/Barnaul', this)">Asia/Barnaul</div>
-<div onclick="selectValue('Timezone', ' Asia/Beirut', this)">Asia/Beirut</div>
-<div onclick="selectValue('Timezone', ' Asia/Bishkek', this)">Asia/Bishkek</div>
-<div onclick="selectValue('Timezone', ' Asia/Brunei', this)">Asia/Brunei</div>
-<div onclick="selectValue('Timezone', ' Asia/Calcutta', this)">Asia/Calcutta</div>
-<div onclick="selectValue('Timezone', ' Asia/Chita', this)">Asia/Chita</div>
-<div onclick="selectValue('Timezone', ' Asia/Choibalsan', this)">Asia/Choibalsan</div>
-<div onclick="selectValue('Timezone', ' Asia/Chongqing', this)">Asia/Chongqing</div>
-<div onclick="selectValue('Timezone', ' Asia/Chungking', this)">Asia/Chungking</div>
-<div onclick="selectValue('Timezone', ' Asia/Colombo', this)">Asia/Colombo</div>
-<div onclick="selectValue('Timezone', ' Asia/Dacca', this)">Asia/Dacca</div>
-<div onclick="selectValue('Timezone', ' Asia/Damascus', this)">Asia/Damascus</div>
-<div onclick="selectValue('Timezone', ' Asia/Dhaka', this)">Asia/Dhaka</div>
-<div onclick="selectValue('Timezone', ' Asia/Dili', this)">Asia/Dili</div>
-<div onclick="selectValue('Timezone', ' Asia/Dubai', this)">Asia/Dubai</div>
-<div onclick="selectValue('Timezone', ' Asia/Dushanbe', this)">Asia/Dushanbe</div>
-<div onclick="selectValue('Timezone', ' Asia/Famagusta', this)">Asia/Famagusta</div>
-<div onclick="selectValue('Timezone', ' Asia/Gaza', this)">Asia/Gaza</div>
-<div onclick="selectValue('Timezone', ' Asia/Harbin', this)">Asia/Harbin</div>
-<div onclick="selectValue('Timezone', ' Asia/Hebron', this)">Asia/Hebron</div>
-<div onclick="selectValue('Timezone', ' Asia/Ho_Chi_Minh', this)">Asia/Ho_Chi_Minh</div>
-<div onclick="selectValue('Timezone', ' Asia/Hong_Kong', this)">Asia/Hong_Kong</div>
-<div onclick="selectValue('Timezone', ' Asia/Hovd', this)">Asia/Hovd</div>
-<div onclick="selectValue('Timezone', ' Asia/Irkutsk', this)">Asia/Irkutsk</div>
-<div onclick="selectValue('Timezone', ' Asia/Istanbul', this)">Asia/Istanbul</div>
-<div onclick="selectValue('Timezone', ' Asia/Jakarta', this)">Asia/Jakarta</div>
-<div onclick="selectValue('Timezone', ' Asia/Jayapura', this)">Asia/Jayapura</div>
-<div onclick="selectValue('Timezone', ' Asia/Jerusalem', this)">Asia/Jerusalem</div>
-<div onclick="selectValue('Timezone', ' Asia/Kabul', this)">Asia/Kabul</div>
-<div onclick="selectValue('Timezone', ' Asia/Kamchatka', this)">Asia/Kamchatka</div>
-<div onclick="selectValue('Timezone', ' Asia/Karachi', this)">Asia/Karachi</div>
-<div onclick="selectValue('Timezone', ' Asia/Kashgar', this)">Asia/Kashgar</div>
-<div onclick="selectValue('Timezone', ' Asia/Kathmandu', this)">Asia/Kathmandu</div>
-<div onclick="selectValue('Timezone', ' Asia/Katmandu', this)">Asia/Katmandu</div>
-<div onclick="selectValue('Timezone', ' Asia/Khandyga', this)">Asia/Khandyga</div>
-<div onclick="selectValue('Timezone', ' Asia/Kolkata', this)">Asia/Kolkata</div>
-<div onclick="selectValue('Timezone', ' Asia/Krasnoyarsk', this)">Asia/Krasnoyarsk</div>
-<div onclick="selectValue('Timezone', ' Asia/Kuala_Lumpur', this)">Asia/Kuala_Lumpur</div>
-<div onclick="selectValue('Timezone', ' Asia/Kuching', this)">Asia/Kuching</div>
-<div onclick="selectValue('Timezone', ' Asia/Kuwait', this)">Asia/Kuwait</div>
-<div onclick="selectValue('Timezone', ' Asia/Macao', this)">Asia/Macao</div>
-<div onclick="selectValue('Timezone', ' Asia/Macau', this)">Asia/Macau</div>
-<div onclick="selectValue('Timezone', ' Asia/Magadan', this)">Asia/Magadan</div>
-<div onclick="selectValue('Timezone', ' Asia/Makassar', this)">Asia/Makassar</div>
-<div onclick="selectValue('Timezone', ' Asia/Manila', this)">Asia/Manila</div>
-<div onclick="selectValue('Timezone', ' Asia/Muscat', this)">Asia/Muscat</div>
-<div onclick="selectValue('Timezone', ' Asia/Nicosia', this)">Asia/Nicosia</div>
-<div onclick="selectValue('Timezone', ' Asia/Novokuznetsk', this)">Asia/Novokuznetsk</div>
-<div onclick="selectValue('Timezone', ' Asia/Novosibirsk', this)">Asia/Novosibirsk</div>
-<div onclick="selectValue('Timezone', ' Asia/Omsk', this)">Asia/Omsk</div>
-<div onclick="selectValue('Timezone', ' Asia/Oral', this)">Asia/Oral</div>
-<div onclick="selectValue('Timezone', ' Asia/Phnom_Penh', this)">Asia/Phnom_Penh</div>
-<div onclick="selectValue('Timezone', ' Asia/Pontianak', this)">Asia/Pontianak</div>
-<div onclick="selectValue('Timezone', ' Asia/Pyongyang', this)">Asia/Pyongyang</div>
-<div onclick="selectValue('Timezone', ' Asia/Qatar', this)">Asia/Qatar</div>
-<div onclick="selectValue('Timezone', ' Asia/Qostanay', this)">Asia/Qostanay</div>
-<div onclick="selectValue('Timezone', ' Asia/Qyzylorda', this)">Asia/Qyzylorda</div>
-<div onclick="selectValue('Timezone', ' Asia/Rangoon', this)">Asia/Rangoon</div>
-<div onclick="selectValue('Timezone', ' Asia/Riyadh', this)">Asia/Riyadh</div>
-<div onclick="selectValue('Timezone', ' Asia/Saigon', this)">Asia/Saigon</div>
-<div onclick="selectValue('Timezone', ' Asia/Sakhalin', this)">Asia/Sakhalin</div>
-<div onclick="selectValue('Timezone', ' Asia/Samarkand', this)">Asia/Samarkand</div>
-<div onclick="selectValue('Timezone', ' Asia/Seoul', this)">Asia/Seoul</div>
-<div onclick="selectValue('Timezone', ' Asia/Shanghai', this)">Asia/Shanghai</div>
-<div onclick="selectValue('Timezone', ' Asia/Singapore', this)">Asia/Singapore</div>
-<div onclick="selectValue('Timezone', ' Asia/Srednekolymsk', this)">Asia/Srednekolymsk</div>
-<div onclick="selectValue('Timezone', ' Asia/Taipei', this)">Asia/Taipei</div>
-<div onclick="selectValue('Timezone', ' Asia/Tashkent', this)">Asia/Tashkent</div>
-<div onclick="selectValue('Timezone', ' Asia/Tbilisi', this)">Asia/Tbilisi</div>
-<div onclick="selectValue('Timezone', ' Asia/Tehran', this)">Asia/Tehran</div>
-<div onclick="selectValue('Timezone', ' Asia/Tel_Aviv', this)">Asia/Tel_Aviv</div>
-<div onclick="selectValue('Timezone', ' Asia/Thimbu', this)">Asia/Thimbu</div>
-<div onclick="selectValue('Timezone', ' Asia/Thimphu', this)">Asia/Thimphu</div>
-<div onclick="selectValue('Timezone', ' Asia/Tokyo', this)">Asia/Tokyo</div>
-<div onclick="selectValue('Timezone', ' Asia/Tomsk', this)">Asia/Tomsk</div>
-<div onclick="selectValue('Timezone', ' Asia/Ujung_Pandang', this)">Asia/Ujung_Pandang</div>
-<div onclick="selectValue('Timezone', ' Asia/Ulaanbaatar', this)">Asia/Ulaanbaatar</div>
-<div onclick="selectValue('Timezone', ' Asia/Ulan_Bator', this)">Asia/Ulan_Bator</div>
-<div onclick="selectValue('Timezone', ' Asia/Urumqi', this)">Asia/Urumqi</div>
-<div onclick="selectValue('Timezone', ' Asia/Ust-Nera', this)">Asia/Ust-Nera</div>
-<div onclick="selectValue('Timezone', ' Asia/Vientiane', this)">Asia/Vientiane</div>
-<div onclick="selectValue('Timezone', ' Asia/Vladivostok', this)">Asia/Vladivostok</div>
-<div onclick="selectValue('Timezone', ' Asia/Yakutsk', this)">Asia/Yakutsk</div>
-<div onclick="selectValue('Timezone', ' Asia/Yangon', this)">Asia/Yangon</div>
-<div onclick="selectValue('Timezone', ' Asia/Yekaterinburg', this)">Asia/Yekaterinburg</div>
-<div onclick="selectValue('Timezone', ' Asia/Yerevan', this)">Asia/Yerevan</div>
-<div onclick="selectValue('Timezone', ' Atlantic/Azores', this)">Atlantic/Azores</div>
-<div onclick="selectValue('Timezone', ' Atlantic/Bermuda', this)">Atlantic/Bermuda</div>
-<div onclick="selectValue('Timezone', ' Atlantic/Canary', this)">Atlantic/Canary</div>
-<div onclick="selectValue('Timezone', ' Atlantic/Cape_Verde', this)">Atlantic/Cape_Verde</div>
-<div onclick="selectValue('Timezone', ' Atlantic/Faeroe', this)">Atlantic/Faeroe</div>
-<div onclick="selectValue('Timezone', ' Atlantic/Faroe', this)">Atlantic/Faroe</div>
-<div onclick="selectValue('Timezone', ' Atlantic/Jan_Mayen', this)">Atlantic/Jan_Mayen</div>
-<div onclick="selectValue('Timezone', ' Atlantic/Madeira', this)">Atlantic/Madeira</div>
-<div onclick="selectValue('Timezone', ' Atlantic/Reykjavik', this)">Atlantic/Reykjavik</div>
-<div onclick="selectValue('Timezone', ' Atlantic/South_Georgia', this)">Atlantic/South_Georgia</div>
-<div onclick="selectValue('Timezone', ' Atlantic/St_Helena', this)">Atlantic/St_Helena</div>
-<div onclick="selectValue('Timezone', ' Atlantic/Stanley', this)">Atlantic/Stanley</div>
-<div onclick="selectValue('Timezone', ' Australia/ACT', this)">Australia/ACT</div>
-<div onclick="selectValue('Timezone', ' Australia/Adelaide', this)">Australia/Adelaide</div>
-<div onclick="selectValue('Timezone', ' Australia/Brisbane', this)">Australia/Brisbane</div>
-<div onclick="selectValue('Timezone', ' Australia/Broken_Hill', this)">Australia/Broken_Hill</div>
-<div onclick="selectValue('Timezone', ' Australia/Canberra', this)">Australia/Canberra</div>
-<div onclick="selectValue('Timezone', ' Australia/Currie', this)">Australia/Currie</div>
-<div onclick="selectValue('Timezone', ' Australia/Darwin', this)">Australia/Darwin</div>
-<div onclick="selectValue('Timezone', ' Australia/Eucla', this)">Australia/Eucla</div>
-<div onclick="selectValue('Timezone', ' Australia/Hobart', this)">Australia/Hobart</div>
-<div onclick="selectValue('Timezone', ' Australia/LHI', this)">Australia/LHI</div>
-<div onclick="selectValue('Timezone', ' Australia/Lindeman', this)">Australia/Lindeman</div>
-<div onclick="selectValue('Timezone', ' Australia/Lord_Howe', this)">Australia/Lord_Howe</div>
-<div onclick="selectValue('Timezone', ' Australia/Melbourne', this)">Australia/Melbourne</div>
-<div onclick="selectValue('Timezone', ' Australia/NSW', this)">Australia/NSW</div>
-<div onclick="selectValue('Timezone', ' Australia/North', this)">Australia/North</div>
-<div onclick="selectValue('Timezone', ' Australia/Perth', this)">Australia/Perth</div>
-<div onclick="selectValue('Timezone', ' Australia/Queensland', this)">Australia/Queensland</div>
-<div onclick="selectValue('Timezone', ' Australia/South', this)">Australia/South</div>
-<div onclick="selectValue('Timezone', ' Australia/Sydney', this)">Australia/Sydney</div>
-<div onclick="selectValue('Timezone', ' Australia/Tasmania', this)">Australia/Tasmania</div>
-<div onclick="selectValue('Timezone', ' Australia/Victoria', this)">Australia/Victoria</div>
-<div onclick="selectValue('Timezone', ' Australia/West', this)">Australia/West</div>
-<div onclick="selectValue('Timezone', ' Australia/Yancowinna', this)">Australia/Yancowinna</div>
-<div onclick="selectValue('Timezone', ' Brazil/Acre', this)">Brazil/Acre</div>
-<div onclick="selectValue('Timezone', ' Brazil/DeNoronha', this)">Brazil/DeNoronha</div>
-<div onclick="selectValue('Timezone', ' Brazil/East', this)">Brazil/East</div>
-<div onclick="selectValue('Timezone', ' Brazil/West', this)">Brazil/West</div>
-<div onclick="selectValue('Timezone', ' CET', this)">CET</div>
-<div onclick="selectValue('Timezone', ' CST6CDT', this)">CST6CDT</div>
-<div onclick="selectValue('Timezone', ' Canada/Atlantic', this)">Canada/Atlantic</div>
-<div onclick="selectValue('Timezone', ' Canada/Central', this)">Canada/Central</div>
-<div onclick="selectValue('Timezone', ' Canada/Eastern', this)">Canada/Eastern</div>
-<div onclick="selectValue('Timezone', ' Canada/Mountain', this)">Canada/Mountain</div>
-<div onclick="selectValue('Timezone', ' Canada/Newfoundland', this)">Canada/Newfoundland</div>
-<div onclick="selectValue('Timezone', ' Canada/Pacific', this)">Canada/Pacific</div>
-<div onclick="selectValue('Timezone', ' Canada/Saskatchewan', this)">Canada/Saskatchewan</div>
-<div onclick="selectValue('Timezone', ' Canada/Yukon', this)">Canada/Yukon</div>
-<div onclick="selectValue('Timezone', ' Chile/Continental', this)">Chile/Continental</div>
-<div onclick="selectValue('Timezone', ' Chile/EasterIsland', this)">Chile/EasterIsland</div>
-<div onclick="selectValue('Timezone', ' Cuba', this)">Cuba</div>
-<div onclick="selectValue('Timezone', ' EET', this)">EET</div>
-<div onclick="selectValue('Timezone', ' EST', this)">EST</div>
-<div onclick="selectValue('Timezone', ' EST5EDT', this)">EST5EDT</div>
-<div onclick="selectValue('Timezone', ' Egypt', this)">Egypt</div>
-<div onclick="selectValue('Timezone', ' Eire', this)">Eire</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT', this)">Etc/GMT</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT+0', this)">Etc/GMT+0</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT+1', this)">Etc/GMT+1</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT+10', this)">Etc/GMT+10</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT+11', this)">Etc/GMT+11</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT+12', this)">Etc/GMT+12</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT+2', this)">Etc/GMT+2</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT+3', this)">Etc/GMT+3</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT+4', this)">Etc/GMT+4</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT+5', this)">Etc/GMT+5</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT+6', this)">Etc/GMT+6</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT+7', this)">Etc/GMT+7</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT+8', this)">Etc/GMT+8</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT+9', this)">Etc/GMT+9</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-0', this)">Etc/GMT-0</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-1', this)">Etc/GMT-1</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-10', this)">Etc/GMT-10</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-11', this)">Etc/GMT-11</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-12', this)">Etc/GMT-12</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-13', this)">Etc/GMT-13</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-14', this)">Etc/GMT-14</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-2', this)">Etc/GMT-2</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-3', this)">Etc/GMT-3</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-4', this)">Etc/GMT-4</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-5', this)">Etc/GMT-5</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-6', this)">Etc/GMT-6</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-7', this)">Etc/GMT-7</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-8', this)">Etc/GMT-8</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT-9', this)">Etc/GMT-9</div>
-<div onclick="selectValue('Timezone', ' Etc/GMT0', this)">Etc/GMT0</div>
-<div onclick="selectValue('Timezone', ' Etc/Greenwich', this)">Etc/Greenwich</div>
-<div onclick="selectValue('Timezone', ' Etc/UCT', this)">Etc/UCT</div>
-<div onclick="selectValue('Timezone', ' Etc/UTC', this)">Etc/UTC</div>
-<div onclick="selectValue('Timezone', ' Etc/Universal', this)">Etc/Universal</div>
-<div onclick="selectValue('Timezone', ' Etc/Zulu', this)">Etc/Zulu</div>
-<div onclick="selectValue('Timezone', ' Europe/Amsterdam', this)">Europe/Amsterdam</div>
-<div onclick="selectValue('Timezone', ' Europe/Andorra', this)">Europe/Andorra</div>
-<div onclick="selectValue('Timezone', ' Europe/Astrakhan', this)">Europe/Astrakhan</div>
-<div onclick="selectValue('Timezone', ' Europe/Athens', this)">Europe/Athens</div>
-<div onclick="selectValue('Timezone', ' Europe/Belfast', this)">Europe/Belfast</div>
-<div onclick="selectValue('Timezone', ' Europe/Belgrade', this)">Europe/Belgrade</div>
-<div onclick="selectValue('Timezone', ' Europe/Berlin', this)">Europe/Berlin</div>
-<div onclick="selectValue('Timezone', ' Europe/Bratislava', this)">Europe/Bratislava</div>
-<div onclick="selectValue('Timezone', ' Europe/Brussels', this)">Europe/Brussels</div>
-<div onclick="selectValue('Timezone', ' Europe/Bucharest', this)">Europe/Bucharest</div>
-<div onclick="selectValue('Timezone', ' Europe/Budapest', this)">Europe/Budapest</div>
-<div onclick="selectValue('Timezone', ' Europe/Busingen', this)">Europe/Busingen</div>
-<div onclick="selectValue('Timezone', ' Europe/Chisinau', this)">Europe/Chisinau</div>
-<div onclick="selectValue('Timezone', ' Europe/Copenhagen', this)">Europe/Copenhagen</div>
-<div onclick="selectValue('Timezone', ' Europe/Dublin', this)">Europe/Dublin</div>
-<div onclick="selectValue('Timezone', ' Europe/Gibraltar', this)">Europe/Gibraltar</div>
-<div onclick="selectValue('Timezone', ' Europe/Guernsey', this)">Europe/Guernsey</div>
-<div onclick="selectValue('Timezone', ' Europe/Helsinki', this)">Europe/Helsinki</div>
-<div onclick="selectValue('Timezone', ' Europe/Isle_of_Man', this)">Europe/Isle_of_Man</div>
-<div onclick="selectValue('Timezone', ' Europe/Istanbul', this)">Europe/Istanbul</div>
-<div onclick="selectValue('Timezone', ' Europe/Jersey', this)">Europe/Jersey</div>
-<div onclick="selectValue('Timezone', ' Europe/Kaliningrad', this)">Europe/Kaliningrad</div>
-<div onclick="selectValue('Timezone', ' Europe/Kiev', this)">Europe/Kiev</div>
-<div onclick="selectValue('Timezone', ' Europe/Kirov', this)">Europe/Kirov</div>
-<div onclick="selectValue('Timezone', ' Europe/Kyiv', this)">Europe/Kyiv</div>
-<div onclick="selectValue('Timezone', ' Europe/Lisbon', this)">Europe/Lisbon</div>
-<div onclick="selectValue('Timezone', ' Europe/Ljubljana', this)">Europe/Ljubljana</div>
-<div onclick="selectValue('Timezone', ' Europe/London', this)">Europe/London</div>
-<div onclick="selectValue('Timezone', ' Europe/Luxembourg', this)">Europe/Luxembourg</div>
-<div onclick="selectValue('Timezone', ' Europe/Madrid', this)">Europe/Madrid</div>
-<div onclick="selectValue('Timezone', ' Europe/Malta', this)">Europe/Malta</div>
-<div onclick="selectValue('Timezone', ' Europe/Mariehamn', this)">Europe/Mariehamn</div>
-<div onclick="selectValue('Timezone', ' Europe/Minsk', this)">Europe/Minsk</div>
-<div onclick="selectValue('Timezone', ' Europe/Monaco', this)">Europe/Monaco</div>
-<div onclick="selectValue('Timezone', ' Europe/Moscow', this)">Europe/Moscow</div>
-<div onclick="selectValue('Timezone', ' Europe/Nicosia', this)">Europe/Nicosia</div>
-<div onclick="selectValue('Timezone', ' Europe/Oslo', this)">Europe/Oslo</div>
-<div onclick="selectValue('Timezone', ' Europe/Paris', this)">Europe/Paris</div>
-<div onclick="selectValue('Timezone', ' Europe/Podgorica', this)">Europe/Podgorica</div>
-<div onclick="selectValue('Timezone', ' Europe/Prague', this)">Europe/Prague</div>
-<div onclick="selectValue('Timezone', ' Europe/Riga', this)">Europe/Riga</div>
-<div onclick="selectValue('Timezone', ' Europe/Rome', this)">Europe/Rome</div>
-<div onclick="selectValue('Timezone', ' Europe/Samara', this)">Europe/Samara</div>
-<div onclick="selectValue('Timezone', ' Europe/San_Marino', this)">Europe/San_Marino</div>
-<div onclick="selectValue('Timezone', ' Europe/Sarajevo', this)">Europe/Sarajevo</div>
-<div onclick="selectValue('Timezone', ' Europe/Saratov', this)">Europe/Saratov</div>
-<div onclick="selectValue('Timezone', ' Europe/Simferopol', this)">Europe/Simferopol</div>
-<div onclick="selectValue('Timezone', ' Europe/Skopje', this)">Europe/Skopje</div>
-<div onclick="selectValue('Timezone', ' Europe/Sofia', this)">Europe/Sofia</div>
-<div onclick="selectValue('Timezone', ' Europe/Stockholm', this)">Europe/Stockholm</div>
-<div onclick="selectValue('Timezone', ' Europe/Tallinn', this)">Europe/Tallinn</div>
-<div onclick="selectValue('Timezone', ' Europe/Tirane', this)">Europe/Tirane</div>
-<div onclick="selectValue('Timezone', ' Europe/Tiraspol', this)">Europe/Tiraspol</div>
-<div onclick="selectValue('Timezone', ' Europe/Ulyanovsk', this)">Europe/Ulyanovsk</div>
-<div onclick="selectValue('Timezone', ' Europe/Uzhgorod', this)">Europe/Uzhgorod</div>
-<div onclick="selectValue('Timezone', ' Europe/Vaduz', this)">Europe/Vaduz</div>
-<div onclick="selectValue('Timezone', ' Europe/Vatican', this)">Europe/Vatican</div>
-<div onclick="selectValue('Timezone', ' Europe/Vienna', this)">Europe/Vienna</div>
-<div onclick="selectValue('Timezone', ' Europe/Vilnius', this)">Europe/Vilnius</div>
-<div onclick="selectValue('Timezone', ' Europe/Volgograd', this)">Europe/Volgograd</div>
-<div onclick="selectValue('Timezone', ' Europe/Warsaw', this)">Europe/Warsaw</div>
-<div onclick="selectValue('Timezone', ' Europe/Zagreb', this)">Europe/Zagreb</div>
-<div onclick="selectValue('Timezone', ' Europe/Zaporozhye', this)">Europe/Zaporozhye</div>
-<div onclick="selectValue('Timezone', ' Europe/Zurich', this)">Europe/Zurich</div>
-<div onclick="selectValue('Timezone', ' GB', this)">GB</div>
-<div onclick="selectValue('Timezone', ' GB-Eire', this)">GB-Eire</div>
-<div onclick="selectValue('Timezone', ' GMT', this)">GMT</div>
-<div onclick="selectValue('Timezone', ' GMT+0', this)">GMT+0</div>
-<div onclick="selectValue('Timezone', ' GMT-0', this)">GMT-0</div>
-<div onclick="selectValue('Timezone', ' GMT0', this)">GMT0</div>
-<div onclick="selectValue('Timezone', ' Greenwich', this)">Greenwich</div>
-<div onclick="selectValue('Timezone', ' HST', this)">HST</div>
-<div onclick="selectValue('Timezone', ' Hongkong', this)">Hongkong</div>
-<div onclick="selectValue('Timezone', ' Iceland', this)">Iceland</div>
-<div onclick="selectValue('Timezone', ' Indian/Antananarivo', this)">Indian/Antananarivo</div>
-<div onclick="selectValue('Timezone', ' Indian/Chagos', this)">Indian/Chagos</div>
-<div onclick="selectValue('Timezone', ' Indian/Christmas', this)">Indian/Christmas</div>
-<div onclick="selectValue('Timezone', ' Indian/Cocos', this)">Indian/Cocos</div>
-<div onclick="selectValue('Timezone', ' Indian/Comoro', this)">Indian/Comoro</div>
-<div onclick="selectValue('Timezone', ' Indian/Kerguelen', this)">Indian/Kerguelen</div>
-<div onclick="selectValue('Timezone', ' Indian/Mahe', this)">Indian/Mahe</div>
-<div onclick="selectValue('Timezone', ' Indian/Maldives', this)">Indian/Maldives</div>
-<div onclick="selectValue('Timezone', ' Indian/Mauritius', this)">Indian/Mauritius</div>
-<div onclick="selectValue('Timezone', ' Indian/Mayotte', this)">Indian/Mayotte</div>
-<div onclick="selectValue('Timezone', ' Indian/Reunion', this)">Indian/Reunion</div>
-<div onclick="selectValue('Timezone', ' Iran', this)">Iran</div>
-<div onclick="selectValue('Timezone', ' Israel', this)">Israel</div>
-<div onclick="selectValue('Timezone', ' Jamaica', this)">Jamaica</div>
-<div onclick="selectValue('Timezone', ' Japan', this)">Japan</div>
-<div onclick="selectValue('Timezone', ' Kwajalein', this)">Kwajalein</div>
-<div onclick="selectValue('Timezone', ' Libya', this)">Libya</div>
-<div onclick="selectValue('Timezone', ' MET', this)">MET</div>
-<div onclick="selectValue('Timezone', ' MST', this)">MST</div>
-<div onclick="selectValue('Timezone', ' MST7MDT', this)">MST7MDT</div>
-<div onclick="selectValue('Timezone', ' Mexico/BajaNorte', this)">Mexico/BajaNorte</div>
-<div onclick="selectValue('Timezone', ' Mexico/BajaSur', this)">Mexico/BajaSur</div>
-<div onclick="selectValue('Timezone', ' Mexico/General', this)">Mexico/General</div>
-<div onclick="selectValue('Timezone', ' NZ', this)">NZ</div>
-<div onclick="selectValue('Timezone', ' NZ-CHAT', this)">NZ-CHAT</div>
-<div onclick="selectValue('Timezone', ' Navajo', this)">Navajo</div>
-<div onclick="selectValue('Timezone', ' PRC', this)">PRC</div>
-<div onclick="selectValue('Timezone', ' PST8PDT', this)">PST8PDT</div>
-<div onclick="selectValue('Timezone', ' Pacific/Apia', this)">Pacific/Apia</div>
-<div onclick="selectValue('Timezone', ' Pacific/Auckland', this)">Pacific/Auckland</div>
-<div onclick="selectValue('Timezone', ' Pacific/Bougainville', this)">Pacific/Bougainville</div>
-<div onclick="selectValue('Timezone', ' Pacific/Chatham', this)">Pacific/Chatham</div>
-<div onclick="selectValue('Timezone', ' Pacific/Chuuk', this)">Pacific/Chuuk</div>
-<div onclick="selectValue('Timezone', ' Pacific/Easter', this)">Pacific/Easter</div>
-<div onclick="selectValue('Timezone', ' Pacific/Efate', this)">Pacific/Efate</div>
-<div onclick="selectValue('Timezone', ' Pacific/Enderbury', this)">Pacific/Enderbury</div>
-<div onclick="selectValue('Timezone', ' Pacific/Fakaofo', this)">Pacific/Fakaofo</div>
-<div onclick="selectValue('Timezone', ' Pacific/Fiji', this)">Pacific/Fiji</div>
-<div onclick="selectValue('Timezone', ' Pacific/Funafuti', this)">Pacific/Funafuti</div>
-<div onclick="selectValue('Timezone', ' Pacific/Galapagos', this)">Pacific/Galapagos</div>
-<div onclick="selectValue('Timezone', ' Pacific/Gambier', this)">Pacific/Gambier</div>
-<div onclick="selectValue('Timezone', ' Pacific/Guadalcanal', this)">Pacific/Guadalcanal</div>
-<div onclick="selectValue('Timezone', ' Pacific/Guam', this)">Pacific/Guam</div>
-<div onclick="selectValue('Timezone', ' Pacific/Honolulu', this)">Pacific/Honolulu</div>
-<div onclick="selectValue('Timezone', ' Pacific/Johnston', this)">Pacific/Johnston</div>
-<div onclick="selectValue('Timezone', ' Pacific/Kanton', this)">Pacific/Kanton</div>
-<div onclick="selectValue('Timezone', ' Pacific/Kiritimati', this)">Pacific/Kiritimati</div>
-<div onclick="selectValue('Timezone', ' Pacific/Kosrae', this)">Pacific/Kosrae</div>
-<div onclick="selectValue('Timezone', ' Pacific/Kwajalein', this)">Pacific/Kwajalein</div>
-<div onclick="selectValue('Timezone', ' Pacific/Majuro', this)">Pacific/Majuro</div>
-<div onclick="selectValue('Timezone', ' Pacific/Marquesas', this)">Pacific/Marquesas</div>
-<div onclick="selectValue('Timezone', ' Pacific/Midway', this)">Pacific/Midway</div>
-<div onclick="selectValue('Timezone', ' Pacific/Nauru', this)">Pacific/Nauru</div>
-<div onclick="selectValue('Timezone', ' Pacific/Niue', this)">Pacific/Niue</div>
-<div onclick="selectValue('Timezone', ' Pacific/Norfolk', this)">Pacific/Norfolk</div>
-<div onclick="selectValue('Timezone', ' Pacific/Noumea', this)">Pacific/Noumea</div>
-<div onclick="selectValue('Timezone', ' Pacific/Pago_Pago', this)">Pacific/Pago_Pago</div>
-<div onclick="selectValue('Timezone', ' Pacific/Palau', this)">Pacific/Palau</div>
-<div onclick="selectValue('Timezone', ' Pacific/Pitcairn', this)">Pacific/Pitcairn</div>
-<div onclick="selectValue('Timezone', ' Pacific/Pohnpei', this)">Pacific/Pohnpei</div>
-<div onclick="selectValue('Timezone', ' Pacific/Ponape', this)">Pacific/Ponape</div>
-<div onclick="selectValue('Timezone', ' Pacific/Port_Moresby', this)">Pacific/Port_Moresby</div>
-<div onclick="selectValue('Timezone', ' Pacific/Rarotonga', this)">Pacific/Rarotonga</div>
-<div onclick="selectValue('Timezone', ' Pacific/Saipan', this)">Pacific/Saipan</div>
-<div onclick="selectValue('Timezone', ' Pacific/Samoa', this)">Pacific/Samoa</div>
-<div onclick="selectValue('Timezone', ' Pacific/Tahiti', this)">Pacific/Tahiti</div>
-<div onclick="selectValue('Timezone', ' Pacific/Tarawa', this)">Pacific/Tarawa</div>
-<div onclick="selectValue('Timezone', ' Pacific/Tongatapu', this)">Pacific/Tongatapu</div>
-<div onclick="selectValue('Timezone', ' Pacific/Truk', this)">Pacific/Truk</div>
-<div onclick="selectValue('Timezone', ' Pacific/Wake', this)">Pacific/Wake</div>
-<div onclick="selectValue('Timezone', ' Pacific/Wallis', this)">Pacific/Wallis</div>
-<div onclick="selectValue('Timezone', ' Pacific/Yap', this)">Pacific/Yap</div>
-<div onclick="selectValue('Timezone', ' Poland', this)">Poland</div>
-<div onclick="selectValue('Timezone', ' Portugal', this)">Portugal</div>
-<div onclick="selectValue('Timezone', ' ROC', this)">ROC</div>
-<div onclick="selectValue('Timezone', ' ROK', this)">ROK</div>
-<div onclick="selectValue('Timezone', ' Singapore', this)">Singapore</div>
-<div onclick="selectValue('Timezone', ' Turkey', this)">Turkey</div>
-<div onclick="selectValue('Timezone', ' UCT', this)">UCT</div>
-<div onclick="selectValue('Timezone', ' US/Alaska', this)">US/Alaska</div>
-<div onclick="selectValue('Timezone', ' US/Aleutian', this)">US/Aleutian</div>
-<div onclick="selectValue('Timezone', ' US/Arizona', this)">US/Arizona</div>
-<div onclick="selectValue('Timezone', ' US/Central', this)">US/Central</div>
-<div onclick="selectValue('Timezone', ' US/East-Indiana', this)">US/East-Indiana</div>
-<div onclick="selectValue('Timezone', ' US/Eastern', this)">US/Eastern</div>
-<div onclick="selectValue('Timezone', ' US/Hawaii', this)">US/Hawaii</div>
-<div onclick="selectValue('Timezone', ' US/Indiana-Starke', this)">US/Indiana-Starke</div>
-<div onclick="selectValue('Timezone', ' US/Michigan', this)">US/Michigan</div>
-<div onclick="selectValue('Timezone', ' US/Mountain', this)">US/Mountain</div>
-<div onclick="selectValue('Timezone', ' US/Pacific', this)">US/Pacific</div>
-<div onclick="selectValue('Timezone', ' US/Samoa', this)">US/Samoa</div>
-<div onclick="selectValue('Timezone', ' UTC', this)">UTC</div>
-<div onclick="selectValue('Timezone', ' Universal', this)">Universal</div>
-<div onclick="selectValue('Timezone', ' W-SU', this)">W-SU</div>
-<div onclick="selectValue('Timezone', ' WET', this)">WET</div>
-<div onclick="selectValue('Timezone', 'Zulu', this)">Zulu</div>
-    </div>
-  </div>
-
-  <div class="dropdown">
-    <button class="dropbtn">Choose Hijri Year</button>
-    <div class="dropdown-content">
-      <div onclick="selectValue('Hijri Year', '1444', this)">1444</div>
-      <div onclick="selectValue('Hijri Year', '1445', this)">1445</div>
-      <div onclick="selectValue('Hijri Year', '1446', this)">1446</div>
-    </div>
-  </div>
-
-  <div class="dropdown">
-    <button class="dropbtn">Choose Hijri Month</button>
-    <div class="dropdown-content">
-      <div onclick="selectValue('Hijri Month', 'Muharram', this)">Muharram</div>
-      <div onclick="selectValue('Hijri Month', 'Safar', this)">Safar</div>
-      <div onclick="selectValue('Hijri Month', 'Rabi al-Awwal', this)">Rabi al-Awwal</div>
-      <div onclick="selectValue('Hijri Month', 'Rabi al-Akhir', this)">Rabi al-Akhir</div>
-      <div onclick="selectValue('Hijri Month', 'Jamadil Awwal', this)">Jamadil Awwal</div>
-      <div onclick="selectValue('Hijri Month', 'Jamadil Akhir', this)">Jamadil Akhir</div>
-      <div onclick="selectValue('Hijri Month', 'Rejab', this)">Rejab</div>
-      <div onclick="selectValue('Hijri Month', 'Shaaban', this)">Shaaban</div>
-      <div onclick="selectValue('Hijri Month', 'Ramadhan', this)">Ramadhan</div>
-      <div onclick="selectValue('Hijri Month', 'Syawal', this)">Syawal</div>
-      <div onclick="selectValue('Hijri Month', 'Dzul Qaedah', this)">Dzul Qaedah</div>
-      <div onclick="selectValue('Hijri Month', 'Dzulhijjah', this)">Dzulhijjah</div>
-    </div>
-  </div>
-</div>
-
-<div class="selected-value">
-  <p><span id="selected-timezone"></span></p>
-  <p><span id="selected-hijri-year"></span></p>
-  <p><span id="selected-hijri-month"></span></p>
-</div>
-
- <div class="container">
-        <button id="executeButton" class="button" onclick="startExecution()">Calculate</button>
-        <div id="progress" class="progress-container">
-            <div class="indeterminate"></div>
+<body class="bg-white">
+  <header class="px-4 lg:px-6 h-14 flex items-center">
+    <a class="flex items-center justify-center" href="#">
+      <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L15.09 9L22 10L17 17L16 22L12 18L8 22L7 17L2 10L8.91 9L12 2Z" />
+      </svg>
+      <span class="sr-only">Moon Visibility Co.</span>
+    </a>
+    <nav class="ml-auto flex gap-4 sm:gap-6">
+      <a class="text-sm font-medium hover:underline underline-offset-4" href="https://husaynirfan1.github.io/home">Who am I ?</a>
+    </nav>
+  </header>
+  <main class="flex-1">
+    <section class="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+      <div class="container px-4 md:px-6">
+        <div class="flex flex-col items-center space-y-4 text-center">
+          <div class="space-y-2">
+            <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+              Moon Visibility Calculator
+            </h1>
+            <p class="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+              Calculate the visibility of the moon based on your location and date.
+            </p>
+          </div>
+          <form id="moon-form" class="space-y-4">
+            <div class="flex flex-col space-y-2">
+              <label for="location" class="text-sm font-medium">Location</label>
+              <select id="location" class="border border-gray-300 rounded px-3 py-2 w-full">
+                <option value="New York, NY, USA">Kuala Terengganu, Malaysia [5°49′48.7″, 103°08′26.9″]</option>
+                <option value="Los Angeles, CA, USA">Muar, Malaysia [2°03′27.9″, 102°33′30.3″]</option>
+                <option value="Chicago, IL, USA">Melaka Tengah, Malaysia [2°11′39.9″, 102°14′56.6″]</option>
+       
+              </select>
+            </div>
+            <div class="flex flex-col space-y-2">
+              <label for="date" class="text-sm font-medium">Date</label>
+              <div class="relative">
+                <input id="date" type="date" class="border border-gray-300 rounded px-3 py-2 w-full">
+              </div>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Calculate</button>
+          </form>
         </div>
-    </div>
-
-
- <script src="script.js"></script>
+      </div>
+    </section>
+    <section id="results" class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 hidden">
+      <div class="container px-4 md:px-6">
+        <div class="flex flex-col items-center space-y-4 text-center">
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">Moon Visibility Results</h2>
+          <div class="flex flex-col items-center space-y-4">
+            <div id="moon-icon" class="text-6xl"></div>
+            <p id="moon-phase" class="text-2xl font-bold"></p>
+            <p id="moon-visibility" class="text-xl"></p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+            <div class="bg-white rounded-lg shadow-md p-4">
+              <img src="https://via.placeholder.com/300" alt="Moon Image 1" class="rounded-lg">
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4">
+              <img src="https://via.placeholder.com/300" alt="Moon Image 2" class="rounded-lg">
+            </div>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-2xl font-bold mb-4">Full Report</h3>
+            <textarea id="full-report" class="w-full h-40 border border-gray-300 rounded px-3 py-2" readonly></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+  </main>
+  <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+    <p class="text-xs text-gray-500 dark:text-gray-400">© 2025 Project-Hilal 1.0 All rights reserved. 
+    Accurate Hijri Calculator (AHC) Framework utilized to calculallte moon visibility conditions.</p>
+    
+    <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+      <a class="text-xs hover:underline underline-offset-4" href="#">Terms of Service</a>
+      <a class="text-xs hover:underline underline-offset-4" href="#">Privacy</a>
+    </nav>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
