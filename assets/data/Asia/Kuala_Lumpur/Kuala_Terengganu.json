@@ -1,8 +1,9 @@
-{
-  "location": {
-    "kuala_terengganu": [
-      {
-        "month": "syawal",
+[
+  {
+    "location": "Malaysia, Kuala Terengganu, Terengganu",
+    "date": "28-2-2025",
+    "phase": "New Moon",
+    	"month": "syawal",
         "hijri": "1446",
         "sunsetTime": "19:20:38",
         "date": "28-2-2025",
@@ -18,7 +19,7 @@
         "Sun_altitude": "-0°18′58.3″",
         "Sun_azimuth": "262°17′03.3″",
         "Crescent_width": "0°00′03.9″",
-        "Moon_illumination": "0.20 %",
+        "illumination": "0.20 %",
         "Moon_distance": "363044.06",
         "Moon_semi-diameter": "0°16′23.0″",
         "Moon_horizontal_parallax": "1°00′06.6″",
@@ -29,7 +30,17 @@
         "Moon_azimuth": "263°00′04.4″",
         "Moon_elongation_topocentric": "5°07′31.9″",
         "Moon_elongation_geocentric": "6°07′02.4″"
-      }
-    ]
+  },
+  {
+    "location": "Malaysia, Kuala Terengganu, Terengganu",
+    "date": "29-2-2025",
+    "phase": "Waxing Crescent",
+    "illumination": 5.00
+  },
+  {
+    "location": "Malaysia, Kuala Terengganu, Terengganu",
+    "date": "1-3-2025",
+    "phase": "First Quarter",
+    "illumination": 50.00
   }
-}
+]
